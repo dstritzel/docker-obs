@@ -11,7 +11,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     
 RUN wget https://github.com/Palakis/obs-ndi/releases/download/4.9.1/libndi4_4.5.1-1_amd64.deb \
     && wget https://github.com/Palakis/obs-ndi/releases/download/4.9.1/obs-ndi_4.9.1-1_amd64.deb \
-    && dpkg -i dpkg -i libndi4_4.5.1-1_amd64.deb
+    && dpkg -i dpkg -i libndi4_4.5.1-1_amd64.deb \
     && dpkg -i obs-ndi_4.9.1-1_amd64.deb
 
 RUN echo "?package(bash):needs=\"X11\" section=\"DockerCustom\" title=\"OBS Screencast\" command=\"obs\"" >> /usr/share/menu/custom-docker && update-menus
